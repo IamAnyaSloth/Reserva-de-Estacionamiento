@@ -1,0 +1,19 @@
+<div class="app-container">
+  <div class="app-header">
+    <h1>{{ est.nombre }}</h1>
+    <p>{{ est.zona }}</p>
+  </div>
+
+  <div class="app-body">
+    <div class="card card-custom p-3 mb-3">
+      <p>Disponibles: <strong>{{ est.disponibles }}</strong></p>
+      <p>Tarifa: <strong>S/ {{ est.tarifa }}</strong></p>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" (click)="reservarYirAPago()" [disabled]="est.disponibles===0">Reservar y pagar</button>
+        <button class="btn btn-outline-celeste" routerLink="/home">Volver</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-footer">ParkApp • Arequipa</div>
+</div>

@@ -1,0 +1,41 @@
+<div class="app-container">
+  <div class="app-header">
+    <h1>Metodo de Pago</h1>
+    <p>Seleccione y complete</p>
+  </div>
+
+  <div class="app-body">
+    <div class="card card-custom p-3 mb-3">
+      <label class="form-check-label mb-2"><i class="bi bi-credit-card"></i> Pagar con Tarjeta</label>
+      <input class="form-control mb-2" placeholder="0000 0000 0000 0000" [(ngModel)]="cardNumber">
+      <div class="row g-2">
+        <div class="col">
+          <input class="form-control" placeholder="MM/AA" [(ngModel)]="expiry">
+        </div>
+        <div class="col">
+          <input class="form-control" placeholder="CVV" [(ngModel)]="cvv">
+        </div>
+      </div>
+      <div class="mt-3 d-grid">
+        <button class="btn btn-primary" (click)="payWithCard()">Pagar con Tarjeta</button>
+      </div>
+    </div>
+
+    <div class="card card-custom p-3 mb-3 text-center">
+      <label class="mb-2"><i class="bi bi-phone"></i> Pagar con Yape</label>
+      <div class="qr-box mb-3">
+        <i class="bi bi-qr-code fs-1 text-muted"></i>
+      </div>
+      <p class="small text-muted mb-2">Escanee el código desde la app Yape y confirme el pago</p>
+      <div class="d-grid">
+        <button class="btn btn-outline-celeste" (click)="payWithYape()">Simular Pago con Yape</button>
+      </div>
+    </div>
+
+    <div class="text-center small text-muted mt-2">
+      Métodos de pago simulados (integración real con Yape/Plin/TPV es trabajo futuro).
+    </div>
+  </div>
+
+  <div class="app-footer">ParkApp • Arequipa</div>
+</div>

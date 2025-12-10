@@ -1,0 +1,32 @@
+<div class="app-container text-center">
+  <div class="app-header">
+    <h1>Reserva Confirmada</h1>
+    <p>Presenta este código al ingresar</p>
+  </div>
+
+  <div class="app-body">
+    <div class="card card-custom p-3">
+
+      <h5 class="mb-2">Código de acceso</h5>
+      <div class="alert alert-success fs-5 fw-bold">
+        {{ codigo || 'PARK-XXXX' }}
+      </div>
+
+      <p class="small text-muted mb-1">Estacionamiento</p>
+      <div class="fw-bold">
+        {{ reserva?.estacionamiento || 'N/A' }}
+      </div>
+
+      <div class="qr-box my-3">
+        <i class="bi bi-qr-code fs-1 text-muted"></i>
+      </div>
+
+      <button class="btn btn-primary w-100" routerLink="/home">
+        Volver al inicio
+      </button>
+
+    </div>
+  </div>
+
+  <div class="app-footer">ParkApp • Arequipa</div>
+</div>

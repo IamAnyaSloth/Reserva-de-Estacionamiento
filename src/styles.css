@@ -1,0 +1,154 @@
+/* Bootstrap import (si no lo tienes en styles.css) */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Paleta */
+:root{
+  --verde: #1fbf75;
+  --verde-oscuro: #159a5c;
+  --celeste: #2bb0e6;
+  --gris-fondo: #f4f8f7;
+  --texto: #263238;
+  --card-bg: #ffffff;
+}
+
+/* Global */
+body{
+  background-color: var(--gris-fondo);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor app (mobile look) */
+.app-container{
+  max-width: 420px;
+  margin: 18px auto;
+  min-height: calc(100vh - 36px);
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Header */
+.app-header{
+  background: linear-gradient(90deg, var(--verde), var(--celeste));
+  color: #fff;
+  padding: 14px 16px;
+}
+.app-header h1{
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+.app-header p{ margin: 2px 0 0; font-size: 12px; opacity: .95; }
+
+/* Content padding */
+.app-body{ padding: 14px; }
+
+/* Cards */
+.card-custom{
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.btn-primary{
+  background-color: var(--verde);
+  border: none;
+}
+.btn-primary:hover{ background-color: var(--verde-oscuro); }
+
+.btn-outline-celeste{
+  color: var(--celeste);
+  border-color: var(--celeste);
+}
+.btn-outline-celeste:hover{
+  background: var(--celeste);
+  color: #fff;
+}
+
+/* Location alert */
+.location-box{
+  background: rgba(43,160,120,0.08);
+  border-left: 4px solid var(--verde);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+/* Form inputs */
+input.form-control, .form-control:focus{
+  border-radius: 8px;
+  box-shadow: none;
+  border-color: #e0e7eb;
+}
+
+/* QR placeholder */
+.qr-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:120px;
+  width:120px;
+  margin:auto;
+  border-radius:8px;
+  background:#f8fafb;
+  border: 1px dashed #d6eaf3;
+}
+
+/* Footer note */
+.app-footer{
+  padding:12px;
+  text-align:center;
+  font-size:12px;
+  color:#607d8b;
+  background:#fafafa;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #777;
+  text-align: center;
+  font-size: 13px;
+}
+
+.bottom-nav i {
+  display: block;
+  font-size: 18px;
+}
+
+.bottom-nav .active {
+  color: var(--verde);
+  font-weight: bold;
+}
+.support-modal {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: white;
+  width: 260px;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  z-index: 1000;
+}

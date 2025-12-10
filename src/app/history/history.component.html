@@ -1,0 +1,17 @@
+<div class="app-container p-3">
+
+  <h5 class="fw-bold mb-3">Historial de reservas</h5>
+
+  <div class="card mb-3" *ngFor="let h of historial">
+    <div class="card-body">
+      <h6 class="card-title">{{ h.nombre }}</h6>
+      <p class="card-text small text-muted">
+        Zona: {{ h.zona }}
+      </p>
+      <p class="card-text fw-bold">
+        Estado: {{ h.estado }}
+      </p>
+    </div>
+  </div>
+
+</div>

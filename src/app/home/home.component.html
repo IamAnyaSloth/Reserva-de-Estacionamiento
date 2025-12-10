@@ -1,0 +1,42 @@
+<div class="app-container">
+  <div class="app-header">
+    <h1>ParkApp Arequipa</h1>
+    <p>Disponibilidad (simulada)</p>
+  </div>
+
+  <div class="app-body">
+    <div class="location-box">
+      <i class="bi bi-geo-alt-fill"></i>
+      &nbsp; Ubicación detectada: <strong>{{ ubicacion.distrito }}</strong> · {{ ubicacion.referencia }}
+      <div class="float-end"><button class="btn btn-sm btn-outline-celeste">Cambiar</button></div>
+    </div>
+
+    <h6 class="mb-2">Estacionamientos cercanos</h6>
+
+    <div class="card card-custom" *ngFor="let e of estacionamientos">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h6 class="mb-1">{{ e.nombre }}</h6>
+            <small class="text-muted">{{ e.zona }}</small>
+          </div>
+          <div class="text-end">
+            <div class="fw-bold">{{ e.disponibles }} disponibles</div>
+            <small class="text-muted">S/ {{ e.tarifa }}</small>
+          </div>
+        </div>
+
+        <div class="mt-3 d-grid gap-2">
+          <button class="btn btn-primary btn-sm" [routerLink]="['/detail', e.id]" [disabled]="e.disponibles===0">
+            Reservar
+          </button>
+          <button class="btn btn-outline-celeste btn-sm" [routerLink]="['/detail', e.id]">
+            Ver detalle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-footer">ParkApp • Arequipa</div>
+</div>
