@@ -1,0 +1,64 @@
+Tecnologías y herramientas utilizadas para la ejecución del proyecto
+
+Para el desarrollo y ejecución de la aplicación ParkApp – Plataforma de Reserva de Estacionamientos, se utilizaron las siguientes tecnologías y herramientas:
+
+🔹 Lenguaje y Framework
+
+TypeScript
+Lenguaje principal utilizado para la lógica de la aplicación, gracias a su tipado fuerte y compatibilidad con Angular.
+
+Angular
+Framework front-end utilizado para el desarrollo de una aplicación tipo móvil (SPA), permitiendo una arquitectura basada en componentes, rutas y servicios.
+
+🔹 Interfaz y Experiencia de Usuario
+
+HTML5 y CSS3
+Utilizados para la estructura y estilos de la aplicación.
+
+Bootstrap 5
+Framework CSS empleado para lograr un diseño responsivo, moderno y con apariencia de aplicación móvil.
+
+Animaciones CSS
+Aplicadas para mejorar la experiencia del usuario y dar fluidez a la navegación.
+
+🔹 Funcionalidades simuladas
+
+Geolocalización del dispositivo (GPS)
+Uso de la API de geolocalización del navegador para simular la ubicación del usuario.
+
+Google Maps (integración visual)
+Implementado para mostrar la ubicación de estacionamientos y simular navegación.
+
+Sistema de pagos simulado
+
+Pago con tarjeta (ingreso de datos ficticios)
+
+Pago con Yape mediante código QR simulado
+
+🔹 Control de versiones
+
+Git
+Utilizado para el control de versiones del proyecto.
+
+GitHub
+Plataforma donde se aloja el repositorio del proyecto y se gestionan los cambios.
+
+🔹 Entorno de ejecución
+
+Node.js
+Entorno de ejecución necesario para Angular.
+
+Angular CLI
+Herramienta utilizada para crear, ejecutar y administrar el proyecto.
+
+Visual Studio Code
+Editor de código empleado durante el desarrollo.
+
+🔹 Comando de ejecución del proyecto
+Para ejecutar el proyecto de manera local se utilizó el siguiente comando:
+
+ng serve
+
+La aplicación se ejecuta por defecto en:
+
+http://localhost:4200
